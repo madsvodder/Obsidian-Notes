@@ -1,4 +1,4 @@
-### 1. Grundstruktur i JavaFX
+## 1. Grundstruktur i JavaFX
 JavaFX er baseret på en arkitektur, hvor UI-elementer (nodes) er arrangeret i en hierarkisk struktur. Grundlæggende består en JavaFX-applikation af følgende dele:
 
 1. **`Stage`**:
@@ -9,14 +9,14 @@ JavaFX er baseret på en arkitektur, hvor UI-elementer (nodes) er arrangeret i e
     - Kan skiftes dynamisk på et `Stage`.
 3. **`Node`**:
     - Hver enkelt visuel komponent (f.eks. knapper, tekstfelter, layouts).
-### 2. Layouts i JavaFX
+## 2. Layouts i JavaFX
 JavaFX tilbyder forskellige layout-containere til at arrangere dine UI-elementer:
 - **`VBox`**: Vertikal liste af elementer.
 - **`HBox`**: Horisontal liste af elementer.
 - **`GridPane`**: Et gitter med rækker og kolonner.
 - **`BorderPane`**: Layout med områder som `top`, `left`, `center`, `right`, og `bottom`.
 - **`StackPane`**: Lægger elementer ovenpå hinanden.
-### 3. Scene Builder og FXML
+## 3. Scene Builder og FXML
 Scene Builder bruges til visuelt at designe brugergrænseflader. Det genererer en `.fxml`-fil, der kan bruges i din JavaFX-applikation.
 
 1. **Integrering af `.fxml` i Java-kode**:
@@ -77,7 +77,7 @@ public class Controller {
 }
 ```
 
-### 4. Events og Bindinger
+## 4. Events og Bindinger
 JavaFX understøtter en række mekanismer til at reagere på brugerinteraktion.
 
 1. **Event Handlers**:

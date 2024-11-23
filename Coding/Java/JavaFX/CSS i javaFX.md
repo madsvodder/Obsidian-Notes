@@ -1,13 +1,13 @@
 JavaFX understøtter brugen af CSS (Cascading Style Sheets) til at tilpasse udseendet og stilen af brugergrænsefladen. Dette giver dig mulighed for at adskille applikationens design fra dens logik, hvilket gør det nemmere at vedligeholde og ændre udseendet uden at skulle ændre Java-koden. 
 Ved at bruge CSS kan du genbruge temaet i forskellige projekter. Dette gør det til et kraftfuldt værktøj for JavaFX-udviklere.
 
-### 1. Tilføj en CSS-fil til din scene:
+## 1. Tilføj en CSS-fil til din scene:
 
 ```java title:styling
 scene.getStylesheets().add("style.css");
 ```
 
-### 2. Eksempel på en CSS-fil (`style.css`):
+## 2. Eksempel på en CSS-fil (`style.css`):
 ```css title:style.css
 /* Generelle styling-regler */
 .root {
@@ -93,7 +93,7 @@ scene.getStylesheets().add("style.css");
 - Layouts (`.vbox`): En simpel boks med kant og baggrundsfarve.
 - Labels og overskrifter (`.label`, `.h1`, `.h2`): Forskellig størrelse og farve.
 - Den specifikke knap med `id="mainButton"` vil også have en sort kant.
-### 3. Anvend en CSS-fil som tema
+## 3. Anvend en CSS-fil som tema
 For at tilpasse udseendet af din JavaFX-applikation kan du tilføje en CSS-fil som et tema. Dette gøres ved at linke CSS-filen til scenen i din `main`-klasse. Når filen er tilknyttet, vil den style alle relevante komponenter i dit JavaFX-projekt.
 
 ```java
@@ -105,7 +105,7 @@ Dette eksempel tilføjer en CSS-fil kaldet `style.css`, som skal placeres i proj
 **Resultat:**  
 CSS-filen vil automatisk ændre udseendet på alle UI-elementer, der matcher de definerede CSS-selektorer. Dette gør det nemt at holde din applikations design konsekvent og let at opdatere.
 
-### 4. Fordele ved CSS i JavaFX
+## 4. Fordele ved CSS i JavaFX
 - **Adskillelse af design og logik:** CSS holder layout og styling adskilt fra Java-koden.
 - **Genbrug:** En CSS-fil kan bruges på tværs af flere scener eller projekter for konsistens.
 - **Fleksibilitet:** Designændringer kræver kun opdatering af CSS-filen, ikke Java-koden.

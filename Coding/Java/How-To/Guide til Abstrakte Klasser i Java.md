@@ -1,3 +1,4 @@
+En abstrakt klasse er en skabelon, der ikke kan instantieres direkte, og som bruges til at definere fælles adfærd for relaterede klasser. Den kan indeholde både abstrakte metoder (uden implementering) og konkrete metoder (med implementering). Subklasser skal implementere de abstrakte metoder, medmindre de selv er abstrakte. Abstrakte klasser bruges til at skabe en fælles base for flere klasser og til at sikre, at bestemte metoder bliver implementeret.
 ## 1. Hvad er en abstrakt klasse?
 - En **abstrakt klasse** er en klasse, der ikke kan instantieres direkte. Den bruges som en skabelon for andre klasser.
 - Den kan indeholde både:
