@@ -1,10 +1,10 @@
 Serialization i Java er processen med at konvertere et objekt til en byte-strøm, så det kan gemmes på disk eller sendes over et netværk. Den modsatte proces, deserialization, gendanner objektet fra byte-strømmen. Dette er nyttigt for at gemme objekter, dele dem mellem forskellige applikationer eller transportere dem via netværk.
 
-### **1. Krav til Serialization**
+### 1. Krav til Serialization
 - Klassen skal implementere `java.io.Serializable` interfacet.
 - Alle objekter i klassen (herunder felter) skal også være serializable. Hvis et felt ikke er det, skal det markeres som `transient`.
 - Husk også at give klassen et `serialVersionUID`
-### **2. Simpelt eksempel af serialization**
+### 2. Simpelt eksempel af serialization
 **Serialization eksempel:** En klasse som skal serialiseres
 ```java
 import java.io.Serializable;
@@ -67,7 +67,7 @@ public class DeserializeExample {
 
 ```
 
-### **3. Håndtering af `transient`**
+### 3. Håndtering af `transient`
 - Felter markeret som `transient` bliver ikke inkluderet i serialization. Dette er nyttigt til data, der enten er midlertidige eller følsomme, som passwords eller sessionsdata.
 - Under serialization springer Java `transient` felter over, og når objektet deserialiseres, vil disse felter få deres standardværdier:
     - `null` for objektreferencer,
@@ -96,14 +96,14 @@ public class SecurePerson implements Serializable {
 ```
 Ved serialization vil feltet `password` ikke blive gemt og vil være `null` efter deserialization.
 
-### **4. Kontrollér** `serialVersionUID`
+### 4. Kontrollér `serialVersionUID`
 - `serialVersionUID` bruges til at sikre, at en serialiseret klasse matcher dens deserializerede version. Hvis en klasse ændres (f.eks. ved tilføjelse af et nyt felt), kan dette føre til `InvalidClassException`, medmindre det samme `serialVersionUID` bruges.
 
 ```java
 private static final long serialVersionUID = 1L;
 ```
 
-### **5. Håndtering af fejl** 
+### 5. Håndtering af fejl 
 - Sørg for at håndtere exceptions som `IOException` og `ClassNotFoundException`.
 - Check filens placering og tilladelser.
 #### **Problemer med `transient` og UI-relaterede variabler:**
@@ -113,6 +113,6 @@ private static final long serialVersionUID = 1L;
     2. **Gendanne dem som "simple" variabler efter deserialization:** Rekonstruer objekterne manuelt eller gennem en metode.
 
 Dette sikrer, at UI-relaterede data håndteres korrekt uden at miste deres funktionalitet i applikationen.
-### **7. Yderligere tips**
+### 7. Yderligere tips
 - Krypter objekter før lagring, hvis de indeholder følsomme data.
 - Overvej at bruge biblioteker som Gson eller Jackson til mere fleksibel serialization til JSON-format.
