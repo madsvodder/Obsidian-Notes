@@ -1,5 +1,3 @@
-# Java Programmeringsressourcer
-
 ## 📚 Java Læringsressourcer
 
 - **[Officiel Java Dokumentation](https://docs.oracle.com/en/java/)**  
@@ -14,11 +12,14 @@
 
 ### IntelliJ IDEA Plugins
 
--  **[Ai Commit by Blarcs](https://plugins.jetbrains.com/plugin/17440-ai-commit)**  
-   Ai Commit hjælper dig med automatisk at generere meningsfulde commit-beskeder ved hjælp af AI-assistance, hvilket er fantastisk til versionskontrol, når du arbejder med Java-projekter.
+- **[Ai Commit by Blarcs](https://plugins.jetbrains.com/plugin/17440-ai-commit)**  
+   Ai Commit hjælper dig med automatisk at generere commit-beskeder ved hjælp af AI-assistance, hvilket er fantastisk til versionskontrol, når du arbejder med Java-projekter.
 
--  **[jDeploy](https://plugins.jetbrains.com/plugin/13474-jdeploy)**  
-   jDeploy forenkler implementeringen af Java-applikationer til forskellige miljøer. Det er et uundværligt værktøj for at gøre Java-implementering lettere og mere konsekvent.
+- **[jDeploy](https://plugins.jetbrains.com/plugin/13474-jdeploy)**  
+   jDeploy forenkler implementeringen af Java-applikationer til forskellige miljøer. Du behøver ikke en Mac for at udgive på macOS eller en Windows-maskine for at udgive på Windows – jDeploy gør det muligt at udgive på tværs af platforme uden ekstra hardware. Det er et uundværligt værktøj for at gøre Java-implementering lettere og mere konsekvent.
+
+- **[Rainbow Brackets](https://plugins.jetbrains.com/plugin/10080-rainbow-brackets)**  
+   Rainbow Brackets fremhæver parenteser i forskellige farver baseret på deres nesting-niveau, hvilket gør din kode mere læselig og lettere at debugge.
 
 ---
 
@@ -31,13 +32,13 @@
 
 ## 🚀 JavaFX Ressourcer
 
--  **[atlantafx GitHub Repository](https://github.com/mkpaz/atlantafx)**  
+- **[atlantafx GitHub Repository](https://github.com/mkpaz/atlantafx)**  
    Et moderne JavaFX toolkit, der hjælper med at skabe stilfulde, attraktive JavaFX-applikationer med et rigt sæt af UI-komponenter.
 
-- **[JavaFX Documentation](https://openjfx.io/)** 
+- **[JavaFX Documentation](https://openjfx.io/)**  
   Den officielle JavaFX-dokumentation, der tilbyder et omfattende bibliotek af værktøjer og ressourcekilder til at udvikle desktop-applikationer i Java.
 
--  **[jbootx GitHub Repository](https://github.com/dicolar/jbootx)**  
+- **[jbootx GitHub Repository](https://github.com/dicolar/jbootx)**  
    Et Bootstrap 3.x tema til JavaFX.
 
 ---
