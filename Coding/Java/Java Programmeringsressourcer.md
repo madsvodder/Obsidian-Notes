@@ -20,6 +20,8 @@
 
 - **[Rainbow Brackets](https://plugins.jetbrains.com/plugin/10080-rainbow-brackets)**  
    Rainbow Brackets fremhæver parenteser i forskellige farver baseret på deres nesting-niveau, hvilket gør din kode mere læselig og lettere at debugge.
+   
+- **[Grep Console](https://plugins.jetbrains.com/plugin/7125-grep-console/)** Grep Console giver dig mulighed for at tilpasse log-output i IntelliJ IDEA. Med dette plugin kan du fremhæve, filtrere eller formatere specifikke loglinjer, hvilket gør det lettere at analysere og debugge store mængder logdata.
 
 ---
 
