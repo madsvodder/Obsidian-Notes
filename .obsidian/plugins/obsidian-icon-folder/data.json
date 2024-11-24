@@ -6,6 +6,7 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiWorkflow",
       "LiCode"
     ],
     "recentlyUsedIconsSize": 5,
@@ -29,5 +30,7 @@
     "lucideIconPackType": "native",
     "debugMode": false
   },
-  "Git/Coding": "LiCode"
+  "Git/Coding": "LiCode",
+  "Coding": "LiCode",
+  "Scrum": "LiWorkflow"
 }
