@@ -138,3 +138,43 @@ if (age > MINIMUM_AGE) {
 }
 
 ```
+
+# 8. Lav kobling og Høj Cohesion
+**Kobling (Coupling)** refererer til, hvor tæt forbundet forskellige klasser eller moduler er. Lav kobling er ønskværdig, da det gør systemet mere fleksibelt og nemmere at vedligeholde. **Cohesion** handler om, hvor veldefineret og fokuseret en klasses ansvar er. Høj cohesion betyder, at en klasse kun har ét veldefineret formål, hvilket gør koden mere læsbar og genbrugelig.
+
+**Eksempel:**
+```java title:Order.java
+class Order {
+    private List<Item> items;
+
+    public void addItem(Item item) {
+        items.add(item);
+    }
+
+    public double calculateTotal() {
+        double total = 0;
+        for (Item item : items) {
+            total += item.getPrice();
+        }
+        return total;
+    }
+}
+```
+
+```java title:item.java
+class Item {
+    private String name;
+    private double price;
+
+    public Item(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+}
+```
+
+Her har **`Order` høj cohesion**, fordi dens metoder alle fokuserer på ordrelogik. Samtidig er **koblingen lav** mellem `Order` og `Item`, da de kun kommunikerer gennem en enkel metode (`getPrice`), uden at `Order` kender til `Item`'s interne detaljer.
