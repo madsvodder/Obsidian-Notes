@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Coding/Java/How-To/Serialization og Deserialization med Jackson JSON.md",
-                "mode": "source",
+                "file": "Coding/Java/JavaFX/CSS i javaFX.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Serialization og Deserialization med Jackson JSON"
+              "title": "CSS i javaFX"
             }
           }
         ]
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Coding/Java/How-To/Serialization og Deserialization med Jackson JSON.md"
+                "file": "Coding/Java/JavaFX/CSS i javaFX.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Serialization og Deserialization med Jackson JSON"
+              "title": "Outline of CSS i javaFX"
             }
           },
           {
@@ -165,7 +165,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "remotely-save:Remotely Save": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -176,9 +175,9 @@
   },
   "active": "c1ead1e44425b522",
   "lastOpenFiles": [
+    "Coding/Java/Java Programmeringsressourcer.md",
+    "Coding/Java/How-To/Serialization og Deserialization med Jackson JSON.md",
     "README.md",
-    "Coding/Java/How-To/Serialization og Deserialization med Jackson JSON.md",
-    "Coding/Java/How-To/Serialization og Deserialization med Jackson JSON.md",
     "Coding/Java/How-To/Guide til Serialization i Java.md",
     "Coding/Java/How-To/Guide til Serialization med Jackson (JSON).md",
     "Coding/Java/How-To/Guide til Interfaces i Java.md",

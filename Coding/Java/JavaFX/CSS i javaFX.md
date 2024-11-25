@@ -105,6 +105,58 @@ Dette eksempel tilføjer en CSS-fil kaldet `style.css`, som skal placeres i proj
 **Resultat:**  
 CSS-filen vil automatisk ændre udseendet på alle UI-elementer, der matcher de definerede CSS-selektorer. Dette gør det nemt at holde din applikations design konsekvent og let at opdatere.
 
+## 5. Ny Dark-Light Mode funktion i JavaFX CSS
+
+En af de nyeste funktioner i JavaFX's CSS-opdatering er understøttelsen af **dark** og **light** mode, som giver udviklere mulighed for at tilpasse applikationens udseende baseret på brugerens præferencer for lys eller mørkt tema. Denne funktion gør det muligt at skabe dynamiske brugergrænseflader, der tilpasser sig forskellige miljøer uden behov for at ændre selve koden.
+
+### Eksempel på Dark/Light Mode CSS:
+```css title:dark-light.css
+/* Standard lys tema */
+.root {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+}
+
+/* Mørk tema */
+:root {
+    -fx-base: #121212;
+    -fx-background-color: #212121;
+    -fx-text-fill: #ffffff;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #4CAF50, #388E3C);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 15px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #2E7D32;
+}
+
+/* Tilføj et CSS media query for at skifte mellem temaer */
+@media (prefers-color-scheme: dark) {
+    .root {
+        -fx-background-color: #212121;
+        -fx-text-fill: #ffffff;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .root {
+        -fx-background-color: #ffffff;
+        -fx-text-fill: #000000;
+    }
+}
+```
+
+Med denne opdatering kan applikationen automatisk skifte mellem et lyst og et mørkt tema afhængigt af systemets præferencer, hvilket giver en mere tilpasset og behagelig brugeroplevelse.
+
+**Fordele ved Dark/Light Mode:**
+
+- **Automatisk tilpasning:** Brugeren behøver ikke selv at vælge et tema; det tilpasses baseret på systemindstillinger.
+- **Bedre brugeroplevelse:** Giver et mere komfortabelt og moderne design, især om natten (mørkt tema).
+- **Konsistens med systemindstillinger:** Applikationen følger brugerens præferencer for mørkt eller lyst tema uden ekstra input.
 ## 4. Fordele ved CSS i JavaFX
 - **Adskillelse af design og logik:** CSS holder layout og styling adskilt fra Java-koden.
 - **Genbrug:** En CSS-fil kan bruges på tværs af flere scener eller projekter for konsistens.
