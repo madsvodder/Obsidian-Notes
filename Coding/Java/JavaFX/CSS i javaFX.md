@@ -105,7 +105,7 @@ Dette eksempel tilføjer en CSS-fil kaldet `style.css`, som skal placeres i proj
 **Resultat:**  
 CSS-filen vil automatisk ændre udseendet på alle UI-elementer, der matcher de definerede CSS-selektorer. Dette gør det nemt at holde din applikations design konsekvent og let at opdatere.
 
-## 5. Ny Dark-Light Mode funktion i JavaFX CSS
+## 5. Dark-Light Mode funktion i JavaFX CSS
 
 En af de nyeste funktioner i JavaFX's CSS-opdatering er understøttelsen af **dark** og **light** mode, som giver udviklere mulighed for at tilpasse applikationens udseende baseret på brugerens præferencer for lys eller mørkt tema. Denne funktion gør det muligt at skabe dynamiske brugergrænseflader, der tilpasser sig forskellige miljøer uden behov for at ændre selve koden.
 
@@ -157,6 +157,75 @@ Med denne opdatering kan applikationen automatisk skifte mellem et lyst og et m�
 - **Automatisk tilpasning:** Brugeren behøver ikke selv at vælge et tema; det tilpasses baseret på systemindstillinger.
 - **Bedre brugeroplevelse:** Giver et mere komfortabelt og moderne design, især om natten (mørkt tema).
 - **Konsistens med systemindstillinger:** Applikationen følger brugerens præferencer for mørkt eller lyst tema uden ekstra input.
+
+### JavaFX og `prefers-color-scheme`
+
+Selvom JavaFX ikke understøtter `prefers-color-scheme` media query direkte som i standard CSS, kan vi stadig anvende systemets farveskema i JavaFX ved hjælp af Java-kode.
+
+JavaFX tilbyder ikke automatisk understøttelse af den nye CSS funktionalitet, men vi kan selv håndtere temaer baseret på systemindstillinger. For at gøre dette, kan vi bruge Java til at detektere brugerens præference og anvende passende stilarter dynamisk.
+
+### Eksempel på JavaFX med Detektion af Systemtema
+
+JavaFX har ikke indbygget funktionalitet til at detektere mørk/løst tema automatisk som CSS, men vi kan bruge en simpel metode til at vælge temaet baseret på platformens systemindstillinger.
+
+```java title:DarkModeExample.java
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+public class DarkModeExample extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        StackPane root = new StackPane();
+        Text text = new Text("Hello, JavaFX!");
+        root.getChildren().add(text);
+
+        // Detekter systemets farveskema og anvend korrekt stylesheet
+        String theme = System.getProperty("os.name").toLowerCase().contains("mac") ? "light" : "dark"; // Eksempel på platformbaseret logik
+
+        Scene scene = new Scene(root, 300, 200);
+
+        if (theme.equals("dark")) {
+            scene.getStylesheets().add(getClass().getResource("dark-theme.css").toExternalForm());
+        } else {
+            scene.getStylesheets().add(getClass().getResource("light-theme.css").toExternalForm());
+        }
+
+        primaryStage.setTitle("Dark Mode Example");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+```
+
+I dette eksempel anvender applikationen et mørkt eller lyst tema baseret på systemets platform, som for eksempel macOS i dette tilfælde. Du kan udvide logikken til at tage højde for andre systemer og deres specifikke farvepræferencer.
+
+### Manuelt Skift af Tema
+
+Du kan også give brugeren kontrol over skiftet mellem lys og mørk mode ved at tilføje en toggle-knap, som ændrer temaet dynamisk.
+```java title:ToggleButton
+ToggleButton darkModeToggle = new ToggleButton("Dark Mode");
+darkModeToggle.setOnAction(event -> {
+    if (darkModeToggle.isSelected()) {
+        scene.getStylesheets().clear();
+        scene.getStylesheets().add(getClass().getResource("dark-theme.css").toExternalForm());
+    } else {
+        scene.getStylesheets().clear();
+        scene.getStylesheets().add(getClass().getResource("light-theme.css").toExternalForm());
+    }
+});
+
+```
+
+Med denne tilgang kan brugeren selv vælge, om de vil bruge mørk eller lys mode i applikationen.
+## Konklusion
+CSS understøttelsen af dark/light mode i JavaFX gør det muligt at skabe en dynamisk og brugervenlig oplevelse, hvor temaet tilpasses automatisk til systemets indstillinger. Ved at bruge `prefers-color-scheme` i CSS eller ved at detektere systemets tema via Java, kan du hurtigt implementere et moderne design, der følger brugerens præferencer. Kombinationen af automatisk temaindstilling og brugerdefinerede toggles giver maksimal fleksibilitet og kontrol.
 ## 4. Fordele ved CSS i JavaFX
 - **Adskillelse af design og logik:** CSS holder layout og styling adskilt fra Java-koden.
 - **Genbrug:** En CSS-fil kan bruges på tværs af flere scener eller projekter for konsistens.
