@@ -105,7 +105,7 @@ Dette eksempel tilføjer en CSS-fil kaldet `style.css`, som skal placeres i proj
 **Resultat:**  
 CSS-filen vil automatisk ændre udseendet på alle UI-elementer, der matcher de definerede CSS-selektorer. Dette gør det nemt at holde din applikations design konsekvent og let at opdatere.
 
-## 5. Dark-Light Mode funktion i JavaFX CSS
+## 4. Dark-Light Mode funktion i JavaFX CSS
 
 En af de nyeste funktioner i JavaFX's CSS-opdatering er understøttelsen af **dark** og **light** mode, som giver udviklere mulighed for at tilpasse applikationens udseende baseret på brugerens præferencer for lys eller mørkt tema. Denne funktion gør det muligt at skabe dynamiske brugergrænseflader, der tilpasser sig forskellige miljøer uden behov for at ændre selve koden.
 
@@ -226,7 +226,7 @@ darkModeToggle.setOnAction(event -> {
 Med denne tilgang kan brugeren selv vælge, om de vil bruge mørk eller lys mode i applikationen.
 ## Konklusion
 CSS understøttelsen af dark/light mode i JavaFX gør det muligt at skabe en dynamisk og brugervenlig oplevelse, hvor temaet tilpasses automatisk til systemets indstillinger. Ved at bruge `prefers-color-scheme` i CSS eller ved at detektere systemets tema via Java, kan du hurtigt implementere et moderne design, der følger brugerens præferencer. Kombinationen af automatisk temaindstilling og brugerdefinerede toggles giver maksimal fleksibilitet og kontrol.
-## 4. Fordele ved CSS i JavaFX
+## 5. Fordele ved CSS i JavaFX
 - **Adskillelse af design og logik:** CSS holder layout og styling adskilt fra Java-koden.
 - **Genbrug:** En CSS-fil kan bruges på tværs af flere scener eller projekter for konsistens.
 - **Fleksibilitet:** Designændringer kræver kun opdatering af CSS-filen, ikke Java-koden.
