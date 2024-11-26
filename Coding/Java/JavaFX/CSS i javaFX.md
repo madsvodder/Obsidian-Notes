@@ -224,7 +224,7 @@ darkModeToggle.setOnAction(event -> {
 ```
 
 Med denne tilgang kan brugeren selv vælge, om de vil bruge mørk eller lys mode i applikationen.
-## Konklusion
+### Konklusion
 CSS understøttelsen af dark/light mode i JavaFX gør det muligt at skabe en dynamisk og brugervenlig oplevelse, hvor temaet tilpasses automatisk til systemets indstillinger. Ved at bruge `prefers-color-scheme` i CSS eller ved at detektere systemets tema via Java, kan du hurtigt implementere et moderne design, der følger brugerens præferencer. Kombinationen af automatisk temaindstilling og brugerdefinerede toggles giver maksimal fleksibilitet og kontrol.
 ## 5. Fordele ved CSS i JavaFX
 - **Adskillelse af design og logik:** CSS holder layout og styling adskilt fra Java-koden.
